@@ -2,14 +2,14 @@ var app = require('express')();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
-server.listen(8080);
+server.listen(/);
 
 // global variables for the server
 var enemies = [];
 var playerSpawnPoints = [];
 var clients = [];
 
-app.get('172.30.144.8', function(req, res) {
+app.get('/', function(req, res) {
 	res.send('hey you got back get "/"');
 });
 
